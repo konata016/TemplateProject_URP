@@ -134,3 +134,20 @@ public static class ToggleExtension
         });
     }
 }
+
+public static class LineRendererExtension
+{
+    /// <summary>
+    /// ライン内の頂点位置の配列を取得する
+    /// </summary>
+    public static Vector3[] GetPositionArr(this LineRenderer lineRenderer)
+    {
+        var positionArr = new Vector3[lineRenderer.positionCount];
+        for (var i = 0; i < positionArr.Length; i++)
+        {
+            positionArr[i] = lineRenderer.GetPosition(i);
+        }
+
+        return positionArr;
+    }
+}
