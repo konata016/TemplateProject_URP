@@ -1,4 +1,4 @@
-// enum‚Ì’è‹`
+// enumï¿½Ì’ï¿½`
 
 public enum PlayerStateType
 {

@@ -1,3 +1,3 @@
-// interface‚Ì’è‹`
+// interfaceï¿½Ì’ï¿½`
 
 using System;
