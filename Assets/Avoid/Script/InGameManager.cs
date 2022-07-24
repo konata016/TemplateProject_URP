@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InGameManager : MonoBehaviour
+public class InGameManager : SingletonMonoBehaviour<InGameManager>
 {
     [SerializeField] private PlayerPresenter playerPresenter;
     [SerializeField] private EnemyPresenter[] enemyPresenterArr;

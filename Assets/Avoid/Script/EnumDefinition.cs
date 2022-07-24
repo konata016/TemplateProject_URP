@@ -1,4 +1,4 @@
-// enum�̒�`
+// enemyの定義
 
 public enum PlayerStateType
 {
@@ -14,4 +14,11 @@ public enum EnemyStateType
     None,
     Idle,
     Attacking,
+}
+
+public enum EnemyBulletStateType
+{
+    None,
+    Standby,
+    Moving,
 }

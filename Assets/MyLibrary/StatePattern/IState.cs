@@ -4,7 +4,7 @@ public interface IState<T> where T : Enum
 {
     StateController<T> Controller { get; }
 
-    T StateTypeNum { get; }
+    T StateType { get; }
 
     /// <summary>
     /// “üêˆ—

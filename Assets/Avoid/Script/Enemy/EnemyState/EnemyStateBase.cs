@@ -7,7 +7,7 @@ public abstract class EnemyStateBase : IState<EnemyStateType>
     public StateController<EnemyStateType> Controller => controller;
 
     private EnemyStateType stateType;
-    public EnemyStateType StateTypeNum => stateType;
+    public EnemyStateType StateType => stateType;
 
     protected EnemyView view => presenter.View;
     protected EnemyModel model => presenter.Model;

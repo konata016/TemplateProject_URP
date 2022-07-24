@@ -2,18 +2,30 @@ using Cysharp.Threading.Tasks;
 using System.Threading;
 using UnityEngine;
 
-public class EnemyView : MonoBehaviour
+public abstract class EnemyBulletViewBase : MonoBehaviour
 {
-    [SerializeField] private Transform muzzlePivot;
-
-    public Vector3 MuzzlePosition => muzzlePivot.position;
-    public Quaternion MuzzleRotation => muzzlePivot.rotation;
-
     public CancellationToken CancellationTokenOnDestroy => this.GetCancellationTokenOnDestroy();
 
-    public void Initialize()
-    {
+    public abstract void Initialize();
 
+    public void SetPosition(Vector3 pos)
+    {
+        transform.position = pos;
+    }
+
+    public void SetRotation(Quaternion rot)
+    {
+        transform.rotation = rot;
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
     }
 
     public T AddComponent<T>() where T : MonoBehaviour

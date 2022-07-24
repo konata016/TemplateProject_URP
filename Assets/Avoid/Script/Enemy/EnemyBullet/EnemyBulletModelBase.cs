@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyModel
+public class EnemyBulletModelBase
 {
     public Vector3 Position => Transform.position;
     public Vector3 ScreenPoint =>
@@ -10,7 +10,7 @@ public class EnemyModel
 
     public readonly Transform Transform;
 
-    public EnemyModel(Transform transform)
+    public EnemyBulletModelBase(Transform transform)
     {
         Transform = transform;
     }

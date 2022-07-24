@@ -7,7 +7,7 @@ public abstract class PlayerStateBase : IState<PlayerStateType>
     public StateController<PlayerStateType> Controller => controller;
 
     private PlayerStateType stateType;
-    public PlayerStateType StateTypeNum => stateType;
+    public PlayerStateType StateType => stateType;
 
     protected PlayerView view => presenter.View;
     protected PlayerModel model => presenter.Model;
